@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Nutmeg';
+    src: url('../fonts/NutmegBoldRegular.woff2') format('woff2'),
+        url('../fonts/NutmegBoldRegular.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+.nugmet {
+    font-family: 'Nutmeg' !important;
+}

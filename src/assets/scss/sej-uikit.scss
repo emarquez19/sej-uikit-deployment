@@ -1,0 +1,24 @@
+// =========================================================
+// * Sej UIKIT - v1.0
+// =========================================================
+//
+
+// Bootstrap Functions
+@import "sej-uikit/bootstrap/functions";
+
+// Custom Variables
+@import "sej-uikit/custom/variables";
+
+// Theme Variables
+@import "sej-uikit/variables";
+
+// Bootstrap Core
+@import "sej-uikit/bootstrap/bootstrap";
+
+// Theme Core
+@import "sej-uikit/theme";
+
+// Custom Variables
+@import "sej-uikit/custom/styles";
+@import "../css/bootstrap5.2-support.min.css";
+

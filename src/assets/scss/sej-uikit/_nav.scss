@@ -1,0 +1,195 @@
+.nav {
+  &.nav-pills {
+    background: $nav-pills-background;
+    border-radius: $nav-pills-border-radius;
+    position: relative;
+    &.nav-pills-vertical {
+      border-radius: $nav-pills-vertical-radius;
+      .nav-link {
+        &.active {
+          border-radius: $nav-pills-vertical-link-radius;
+        }
+      }
+    }
+    .nav-link {
+      z-index: 3;
+      color: $dark;
+      border-radius: $nav-pills-link-border-radius;
+      background-color: inherit;
+      &.active {
+        animation: $nav-pills-link-active-animation;
+      }
+      &:hover:not(.active) {
+        color: $dark;
+      }
+    }
+    &.nav-pills-primary {
+      background: $white;
+      color: $white;
+      .nav-link{
+        &.active{
+          color: $white;
+        }
+      }
+      .moving-tab {
+        .nav-link.active {
+          background: $primary-gradient;
+          color: $primary-gradient;
+        }
+      }
+    }
+    &.nav-pills-info {
+      background: $white;
+      color: $white;
+      .nav-link{
+        &.active{
+          color: $white;
+        }
+      }
+      .moving-tab {
+        .nav-link.active {
+          background: $info-gradient;
+          color: $info-gradient;
+        }
+      }
+    }
+    &.nav-pills-success {
+      background: $white;
+      color: $white;
+      .nav-link{
+        &.active{
+          color: $white;
+        }
+      }
+      .moving-tab {
+        .nav-link.active {
+          background: $success-gradient;
+          color: $success-gradient;
+        }
+      }
+    }
+    &.nav-pills-warning {
+      background: $white;
+      color: $white;
+      .nav-link{
+        &.active{
+          color: $white;
+        }
+      }
+      .moving-tab {
+        .nav-link.active {
+          background: $warning-gradient;
+          color: $warning-gradient;
+        }
+      }
+    }
+    &.nav-pills-danger {
+      background: $white;
+      color: $white;
+      .nav-link{
+        &.active{
+          color: $white;
+        }
+      }
+      .moving-tab {
+        .nav-link.active {
+          background: $danger-gradient;
+          color: $danger-gradient;
+        }
+      }
+    }
+    &.nav-pills-dark {
+      background: $white;
+      color: $white;
+      .nav-link{
+        &.active{
+          color: $white;
+        }
+      }
+      .moving-tab {
+        .nav-link.active {
+          background: $dark-gradient;
+          color: $dark-gradient;
+        }
+      }
+    }
+    .nav-item{
+      z-index: 3;
+    }
+  }
+}
+.moving-tab {
+  z-index: 1 !important;
+  .nav-link {
+    color: $white;
+    transition: .2s ease;
+    border-radius: $nav-pills-link-border-radius;
+    &.active {
+      color: $white;
+      font-weight: $font-weight-bold;
+      box-shadow: $nav-pills-link-box-shadow;
+      animation: $nav-pills-link-active-animation;
+      background: $white;
+    }
+    &:hover:not(.active) {
+      color: $dark;
+    }
+  }
+}
+
+.colored-navbar {
+  background: $primary;
+  color: $white;
+  // padding: 10px 10px 10px 13px;
+  padding: 7px 7px 7px 10px;
+  border-radius: 10px;
+
+  .input-group-text {
+    background: transparent;
+    border: none;
+    padding-left: 14px;
+    
+    i {
+      color: #cccccc;
+    }
+  }
+
+  input.form-control {
+    background: rgba(0,0,0,0.13);
+    border: none;
+    padding: 0.7rem 0.75rem;
+    min-width: 180px;
+
+    &::placeholder {
+      color: #ffffff;
+    }
+
+    &:not(:placeholder-shown) {
+      color: #ffffff;
+    }
+
+    &:focus {
+      background: $white;
+      color: $black !important;
+      &::placeholder {
+        color: inherit;
+      }
+      border-left: 1px solid rgba(0,0,0,0.0) !important;
+      border-right: 1px solid rgba(0,0,0,0.0) !important;
+      border-color: transparent;
+      box-shadow: 0 0 5px 2px rgba(0,0,0,0.2);
+    }
+  }
+
+  a {
+    color: $white !important;
+    i {
+      font-size: 1rem;
+    }
+
+    
+    &:hover {
+      color: $alternative !important;
+    }
+  }
+}

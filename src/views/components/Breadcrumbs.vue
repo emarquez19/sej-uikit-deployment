@@ -1,0 +1,109 @@
+<template>
+  <div class="mb-3 container-fluid components-fluid-area">
+    <div class="row">
+      <div class="col-12">
+        <div class="documentation-block">
+          <h5 class="text-white titlesub"><i class="lab la-bootstrap"></i> Breadcrumbs</h5>
+          <h6 class="mt-3 titlesub">¿Cómo funcionan?</h6>
+          <p class="p-3 mb-0 pb-2 text-sm">
+            Use an ordered or unordered list with linked list items to create a minimally styled breadcrumb. Use our utilities to add additional styles as desired.<br><br>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 mb-2">
+        <h6 class="mt-3"><i class="las la-bolt"></i> Ejemplo en vivo</h6>
+      </div>
+      <div class="col-12">
+        <div class="documentation-block">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">Home</li>
+                </ol>
+            </nav>
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#"><i class="las la-home"></i> Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                </ol>
+            </nav>
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                </ol>
+            </nav>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="code-viewer-toolbar">
+          <h6 class="text-md">Código de muestra</h6>
+          <button @click="copyToClipboard(1)" class="copy-to-clip"><i class="las la-clipboard"></i></button>
+        </div>
+        <pre class="code-viewer">
+          <code id="textToBecopied1">
+            {{codeSample1}}
+          </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+</template>
+<script setup></script>
+<script>
+export default {
+  name: "BreadcrumbHtmlComponent",
+  components: {
+  },
+  data() {
+     return {
+    codeSample1: 
+      `
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Home</li>
+    </ol>
+</nav>
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#"><i class="las la-home"></i> Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Library</li>
+    </ol>
+</nav>
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Library</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Data</li>
+    </ol>
+</nav>
+      `,
+    // codeSample2: 
+    //   `
+
+    //   `,
+    };
+  },
+    methods : {
+    copyToClipboard(number) {
+      let idOfText = "textToBecopied"+number;
+      const copyText = document.getElementById(idOfText).textContent;
+      const textArea = document.createElement('textarea');
+      textArea.className = "contextual-component";
+      textArea.textContent = copyText;
+      document.body.append(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      alert("Copiado!");
+    },
+  }
+};
+</script>
