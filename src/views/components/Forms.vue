@@ -18,6 +18,14 @@
       </div>
       <div class="col-12">
         <div class="documentation-block">
+            <div class="form-group">
+              <label for="" class="fw-normal label-input">Nombre input</label>
+              <input class="form-control mb-2" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
+            </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="documentation-block">
             <input class="form-control form-control-lg mb-2" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
             <input class="form-control mb-2" type="text" placeholder="Default input" aria-label="default input example">
             <input class="form-control form-control-sm mb-2" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example">
